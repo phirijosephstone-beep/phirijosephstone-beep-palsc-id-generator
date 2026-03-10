@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PALSC Member ID Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jsPDF for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>PALSC Member ID Generator</h1>
+
+    <div class="layout">
+      <form id="idForm" class="form">
+        <label>
+          Full name
+          <input type="text" id="fullName" placeholder="Jane Doe" required />
+        </label>
+
+        <label>
+          University
+          <input type="text" id="university" placeholder="University of Example" required />
+        </label>
+
+        <label>
+          Year of completion
+          <input type="text" id="year" placeholder="2024" required />
+        </label>
+
+        <label>
+          Date of birth
+          <input type="date" id="dob" required />
+        </label>
+
+        <label>
+          ID number
+          <input type="text" id="idNumber" placeholder="PALSC-0001" required />
+        </label>
+
+        <label>
+          Photo (JPEG/PNG)
+          <input type="file" id="photoInput" accept="image/*" />
+        </label>
+
+        <div class="buttons">
+          <button type="button" id="generateBtn">Generate Preview</button>
+          <button type="button" id="downloadPngBtn">Download PNG</button>
+          <button type="button" id="downloadPdfBtn">Download PDF</button>
+          <button type="reset" id="resetBtn">Reset</button>
+        </div>
+      </form>
+
+      <div class="preview">
+        <h2>Preview</h2>
+        <canvas id="idCanvas" width="1000" height="600"></canvas>
+      </div>
+    </div>
+
+    <footer>
+      <small>Made for Pan-African Law Students Confederation</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
